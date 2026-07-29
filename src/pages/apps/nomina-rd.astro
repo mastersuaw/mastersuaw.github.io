@@ -1,0 +1,12 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AppDetail from '../../components/AppDetail.astro';
+import { getProjectBySlug } from '../../data/projects';
+
+const project = getProjectBySlug('nomina-rd');
+if (!project) throw new Error('Proyecto no encontrado');
+---
+
+<BaseLayout title={project.name} description={project.description}>
+  <AppDetail project={project} />
+</BaseLayout>

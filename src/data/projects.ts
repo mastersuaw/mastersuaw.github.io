@@ -357,6 +357,48 @@ export const projects: Project[] = [
       },
     },
   },
+  {
+    slug: 'nomina-rd',
+    name: 'Nómina RD',
+    tagline: 'Calcula tu sueldo neto en República Dominicana (AFP, SFS e ISR)',
+    description:
+      'Calculadora nativa offline de nómina y retenciones laborales para República Dominicana. Ingresa el salario bruto mensual y obtén sueldo neto con desglose de AFP, SFS e ISR según tasas y topes embebidos. Historial local, FAQ y compartir resultados. Sin cuenta ni telemetría.',
+    bundleId: 'com.nominard.mastersuaw',
+    version: '1.0.0',
+    platforms: ['iOS 17+', 'Android'],
+    icon: `${BASE}images/apps/nomina-rd.png`,
+    features: [
+      'Calculadora de sueldo neto a partir del salario bruto mensual',
+      'Desglose de retenciones AFP (2.87%), SFS (3.04%) e ISR con topes TSS',
+      'Vista quincenal y proyección anual del cálculo',
+      'Historial local de cálculos (borrable desde la app)',
+      'Preguntas frecuentes sobre ISR, AFP, SFS y el flujo de cálculo',
+      'Compartir resultado del cálculo',
+      'Enlaces a fuentes DGII/TSS y avisos legales en la app',
+      'Offline-first: sin backend, cuenta ni telemetría en v1',
+      'Herramienta informativa: no sustituye asesoría contable ni la retención del empleador',
+    ],
+    stack: ['SwiftUI', 'Jetpack Compose', 'Kotlin'],
+    websiteUrl: 'https://tunominard.com/',
+    stores: {},
+    legal: {
+      privacy: {
+        type: 'internal',
+        url: `${BASE}legal/nomina-rd/privacidad`,
+        label: 'Política de privacidad',
+      },
+      terms: {
+        type: 'internal',
+        url: `${BASE}legal/nomina-rd/terminos`,
+        label: 'Términos y condiciones',
+      },
+      support: {
+        type: 'internal',
+        url: `${BASE}legal/nomina-rd/soporte`,
+        label: 'Soporte',
+      },
+    },
+  },
 ];
 
 export function getProjectBySlug(slug: string): Project | undefined {

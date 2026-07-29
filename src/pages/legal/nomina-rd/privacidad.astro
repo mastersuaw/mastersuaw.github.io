@@ -1,0 +1,79 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import LegalContent from '../../../components/LegalContent.astro';
+
+const updated = '28 de julio de 2026';
+---
+
+<BaseLayout
+  title="Política de privacidad — Nómina RD"
+  description="Política de privacidad de Nómina RD, calculadora de nómina offline para República Dominicana."
+>
+  <LegalContent
+    title="Política de privacidad"
+    appName="Nómina RD"
+    appSlug="nomina-rd"
+    updated={updated}
+  >
+    <p>
+      Esta política describe cómo <strong>Nómina RD</strong> (desarrollada por mastersuaw) trata la
+      información cuando utilizas la aplicación.
+    </p>
+
+    <h2>1. Responsable</h2>
+    <p>
+      Desarrollador: <strong>mastersuaw</strong><br />
+      Aplicación: Nómina RD<br />
+      Identificador: com.nominard.mastersuaw
+    </p>
+
+    <h2>2. Resumen</h2>
+    <p>
+      Nómina RD es una calculadora de nómina <strong>offline</strong> para República Dominicana.
+      <strong>No recopilamos datos personales</strong>, no usamos cuentas y no enviamos información
+      a servidores propios.
+    </p>
+
+    <h2>3. Datos que se guardan en el dispositivo</h2>
+    <ul>
+      <li>
+        Historial local de cálculos (salario bruto y resultados) almacenado solo en el dispositivo
+        (UserDefaults / DataStore).
+      </li>
+      <li>Puedes borrar el historial desde la pestaña Historial.</li>
+    </ul>
+
+    <h2>4. Datos que no recopilamos</h2>
+    <ul>
+      <li>No pedimos nombre, correo, cédula ni ubicación</li>
+      <li>No usamos analítica, publicidad ni rastreo en esta versión</li>
+      <li>No sincronizamos datos en la nube</li>
+    </ul>
+
+    <h2>5. Enlaces externos</h2>
+    <p>
+      Si abres enlaces a DGII, TSS o el sitio web
+      <a href="https://tunominard.com/" target="_blank" rel="noopener noreferrer">tunominard.com</a>,
+      esos servicios tienen sus propias políticas.
+    </p>
+
+    <h2>6. Menores de edad</h2>
+    <p>
+      La app no está dirigida específicamente a menores de 13 años y no recopila conscientemente
+      datos personales de ningún usuario.
+    </p>
+
+    <h2>7. Cambios a esta política</h2>
+    <p>
+      Podemos actualizar esta política ocasionalmente. La fecha de la última actualización se
+      indica al inicio de este documento.
+    </p>
+
+    <h2>8. Contacto</h2>
+    <p>
+      Para consultas sobre privacidad, escribe a
+      <a href="mailto:mastersuaw.dev@gmail.com">mastersuaw.dev@gmail.com</a> o visita la página de
+      <a href={`${import.meta.env.BASE_URL}legal/nomina-rd/soporte`}>soporte de Nómina RD</a>.
+    </p>
+  </LegalContent>
+</BaseLayout>

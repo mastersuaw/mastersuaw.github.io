@@ -1,0 +1,66 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import LegalContent from '../../../components/LegalContent.astro';
+
+const updated = '28 de julio de 2026';
+const base = import.meta.env.BASE_URL;
+---
+
+<BaseLayout
+  title="Soporte — Nómina RD"
+  description="Soporte y contacto para Nómina RD."
+>
+  <LegalContent title="Soporte" appName="Nómina RD" appSlug="nomina-rd" updated={updated}>
+    <p>
+      ¿Necesitas ayuda con Nómina RD? Aquí encontrarás las formas de contacto y recursos útiles.
+    </p>
+
+    <h2>Información de la aplicación</h2>
+    <ul>
+      <li><strong>Nombre:</strong> Nómina RD</li>
+      <li><strong>Versión:</strong> 1.0.0</li>
+      <li><strong>Desarrollador:</strong> mastersuaw</li>
+      <li><strong>Identificador:</strong> com.nominard.mastersuaw</li>
+      <li><strong>Plataformas:</strong> iOS 17+, Android</li>
+      <li>
+        <strong>Sitio:</strong>
+        <a href="https://tunominard.com/" target="_blank" rel="noopener noreferrer"
+          >tunominard.com</a
+        >
+      </li>
+    </ul>
+
+    <h2>Contacto</h2>
+    <div class="support-card">
+      <p>
+        <strong>Correo de soporte:</strong>
+        <a href="mailto:mastersuaw.dev@gmail.com">mastersuaw.dev@gmail.com</a>
+      </p>
+    </div>
+
+    <h2>Preguntas frecuentes</h2>
+    <h3>¿Necesito crear una cuenta?</h3>
+    <p>No. Nómina RD funciona 100% offline, sin registro ni inicio de sesión.</p>
+
+    <h3>¿Los resultados son oficiales?</h3>
+    <p>
+      No. Es una herramienta informativa. Confirma siempre con tu empleador o un profesional
+      autorizado; las tasas DGII/TSS pueden cambiar.
+    </p>
+
+    <h3>¿Qué datos guarda la app?</h3>
+    <p>
+      Solo un historial local de cálculos en el dispositivo. Puedes borrarlo desde Historial. No hay
+      telemetría ni sincronización en la nube en esta versión.
+    </p>
+
+    <h3>¿Qué necesito para calcular?</h3>
+    <p>Solo tu salario bruto mensual en pesos dominicanos (antes de retenciones).</p>
+
+    <h3>Enlaces legales</h3>
+    <ul>
+      <li><a href={`${base}legal/nomina-rd/privacidad`}>Política de privacidad</a></li>
+      <li><a href={`${base}legal/nomina-rd/terminos`}>Términos y condiciones</a></li>
+    </ul>
+  </LegalContent>
+</BaseLayout>

@@ -1,0 +1,80 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import LegalContent from '../../../components/LegalContent.astro';
+
+const updated = '28 de julio de 2026';
+---
+
+<BaseLayout
+  title="Términos y condiciones — Nómina RD"
+  description="Términos y condiciones de uso de Nómina RD."
+>
+  <LegalContent
+    title="Términos y condiciones"
+    appName="Nómina RD"
+    appSlug="nomina-rd"
+    updated={updated}
+  >
+    <p>
+      Al descargar o utilizar <strong>Nómina RD</strong>, aceptas los siguientes términos y
+      condiciones.
+    </p>
+
+    <h2>1. Descripción del servicio</h2>
+    <p>
+      Nómina RD estima retenciones laborales en República Dominicana (AFP, SFS e ISR) a partir del
+      salario bruto mensual. Es una <strong>herramienta informativa</strong> y se proporciona «tal
+      cual» para uso personal.
+    </p>
+
+    <h2>2. Sin garantía de exactitud oficial</h2>
+    <p>
+      Los cálculos se basan en tasas, topes e escalas embebidas en la aplicación. Las resoluciones de
+      DGII y TSS pueden cambiar. <strong>Los resultados no sustituyen</strong> el cálculo de tu
+      empleador, un contador o las declaraciones oficiales.
+    </p>
+
+    <h2>3. Uso permitido</h2>
+    <p>
+      Puedes usar la app para estimar tu sueldo neto de forma personal. No debes presentarla como
+      asesoría profesional autorizada. Tampoco está permitido:
+    </p>
+    <ul>
+      <li>Modificar, descompilar o realizar ingeniería inversa de la aplicación</li>
+      <li>Utilizar la app con fines ilegales o que infrinjan derechos de terceros</li>
+      <li>Redistribuir la aplicación sin autorización del desarrollador</li>
+    </ul>
+
+    <h2>4. Propiedad intelectual</h2>
+    <p>
+      La marca Nómina RD y el software de esta aplicación están reservados a sus titulares
+      (mastersuaw).
+    </p>
+
+    <h2>5. Limitación de responsabilidad</h2>
+    <p>
+      En la máxima medida permitida por la ley, los autores no responden por decisiones tomadas con
+      base en los resultados de la app (contratación, presupuestos, declaraciones, etc.).
+    </p>
+
+    <h2>6. Exclusión de garantías</h2>
+    <p>
+      La aplicación se ofrece sin garantías de ningún tipo, expresas o implícitas. No garantizamos
+      que los cálculos coincidan siempre con la retención oficial ni que el servicio esté libre de
+      errores.
+    </p>
+
+    <h2>7. Modificaciones</h2>
+    <p>
+      Podemos actualizar estos términos al publicar nuevas versiones de la app. El uso continuado
+      tras los cambios implica la aceptación de los nuevos términos.
+    </p>
+
+    <h2>8. Contacto</h2>
+    <p>
+      Para consultas, visita la página de
+      <a href={`${import.meta.env.BASE_URL}legal/nomina-rd/soporte`}>soporte</a> o escribe a
+      <a href="mailto:mastersuaw.dev@gmail.com">mastersuaw.dev@gmail.com</a>.
+    </p>
+  </LegalContent>
+</BaseLayout>
