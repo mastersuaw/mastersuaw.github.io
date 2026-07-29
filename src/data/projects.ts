@@ -399,6 +399,48 @@ export const projects: Project[] = [
       },
     },
   },
+  {
+    slug: 'examen-rd',
+    name: 'Examen RD',
+    tagline: 'Preparación teórica para la licencia de conducir en República Dominicana',
+    description:
+      'App Flutter offline-first de preparación para el examen teórico de la licencia de conducir en República Dominicana. Estudio por temas, simulacro 20 preguntas / 20 minutos, catálogo de señales, checklist del trámite, prep. práctico y psicométrico/CEMECO. Categorías 01 (moto), 02 (livianos) y 03/04 (pesados). Sin cuenta ni backend; no afiliada al INTRANT.',
+    bundleId: 'com.examenrd.mastersuaw',
+    version: '1.0.0',
+    platforms: ['iOS', 'Android'],
+    icon: `${BASE}images/apps/examen-rd.png`,
+    features: [
+      'Bancos de preguntas Cat. 01 (moto), Cat. 02 (livianos) y Cat. 03/04 (pesados)',
+      'Estudio por tema, mixto y banco de errores con feedback y explicaciones',
+      'Simulacro cronometrado estilo 20 preguntas · 20 minutos',
+      'Catálogo de señales de tránsito con búsqueda, filtros y quiz corto',
+      'Checklist del trámite RD con pasos ordenados y enlaces a OV / portal / examen.intrant',
+      'Prep. práctico: tips, maniobras y costos/plazos por categoría',
+      'Prep. psicométrico / CEMECO: tips y checklist de documentos',
+      'Progreso, historial de simulacros y preferencias solo en el dispositivo',
+      'Offline-first: sin cuenta, login ni servidor propio',
+      'Material de preparación independiente: no es el examen oficial ni está afiliada al INTRANT',
+    ],
+    stack: ['Flutter', 'Dart', 'go_router', 'SharedPreferences'],
+    stores: {},
+    legal: {
+      privacy: {
+        type: 'internal',
+        url: `${BASE}legal/examen-rd/privacidad`,
+        label: 'Política de privacidad',
+      },
+      terms: {
+        type: 'internal',
+        url: `${BASE}legal/examen-rd/terminos`,
+        label: 'Términos y condiciones',
+      },
+      support: {
+        type: 'internal',
+        url: `${BASE}legal/examen-rd/soporte`,
+        label: 'Soporte',
+      },
+    },
+  },
 ];
 
 export function getProjectBySlug(slug: string): Project | undefined {

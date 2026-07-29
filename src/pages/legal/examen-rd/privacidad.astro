@@ -1,0 +1,98 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import LegalContent from '../../../components/LegalContent.astro';
+
+const updated = '29 de julio de 2026';
+---
+
+<BaseLayout
+  title="Política de privacidad — Examen RD"
+  description="Política de privacidad de Examen RD, app de preparación teórica para licencia de conducir en República Dominicana."
+>
+  <LegalContent
+    title="Política de privacidad"
+    appName="Examen RD"
+    appSlug="examen-rd"
+    updated={updated}
+  >
+    <p>
+      Esta política describe cómo <strong>Examen RD</strong> (ExamenRD, desarrollada por mastersuaw)
+      trata la información cuando utilizas la aplicación.
+    </p>
+
+    <h2>1. Responsable</h2>
+    <p>
+      Desarrollador: <strong>mastersuaw</strong><br />
+      Aplicación: Examen RD (ExamenRD)<br />
+      Identificador: com.examenrd.mastersuaw
+    </p>
+
+    <h2>2. Resumen</h2>
+    <p>
+      Examen RD es una aplicación de <strong>preparación</strong> para el examen teórico de la
+      licencia de conducir en República Dominicana. Es <strong>offline-first</strong>: el contenido
+      educativo va embebido en la app. <strong>No pedimos cuenta ni login</strong>, no hay servidor
+      propio de usuarios y el progreso se guarda solo en tu dispositivo. No está afiliada al INTRANT
+      ni a ninguna autoridad de tránsito.
+    </p>
+
+    <h2>3. Datos que se guardan en el dispositivo</h2>
+    <ul>
+      <li>
+        Preferencias (onboarding completado, categoría elegida, recordatorio opcional de estudio).
+      </li>
+      <li>Progreso de estudio (respuestas, temas, banco de errores).</li>
+      <li>Historial de simulacros.</li>
+      <li>Estado del checklist del trámite, maniobras prácticas y documentos psicométricos.</li>
+      <li>Estado de desbloqueo Premium (si aplica) tras compra o restauración en la tienda.</li>
+    </ul>
+    <p>
+      Estos datos <strong>no se sincronizan</strong> a la nube de Examen RD. Si desinstalas la app o
+      borras sus datos, puedes perder el progreso. También puedes restablecer el progreso desde
+      Ajustes.
+    </p>
+
+    <h2>4. Datos que no recopilamos</h2>
+    <ul>
+      <li>No pedimos cédula, nombre, correo ni teléfono para usar la app</li>
+      <li>No usamos ubicación precisa, contactos, fotos ni micrófono</li>
+      <li>No usamos tracking publicitario ni analytics de terceros en esta versión</li>
+      <li>No hay base de datos remota de usuarios</li>
+    </ul>
+
+    <h2>5. Compras in-app</h2>
+    <p>
+      Si en alguna versión se ofrece Premium como compra única, el pago lo procesan Apple App Store o
+      Google Play según sus políticas. Examen RD no recibe ni almacena números de tarjeta. El estado
+      Premium se guarda localmente; “Restaurar compras” consulta la tienda con tu cuenta de
+      Apple/Google.
+    </p>
+
+    <h2>6. Enlaces externos</h2>
+    <p>
+      Si abres enlaces a la Oficina Virtual, portal institucional o
+      <a href="https://examen.intrant.gob.do/" target="_blank" rel="noopener noreferrer"
+        >examen.intrant.gob.do</a
+      >, abandonas Examen RD y aplican las políticas de esos sitios. Esas visitas son opcionales.
+    </p>
+
+    <h2>7. Menores de edad</h2>
+    <p>
+      La app puede usarse en el contexto de obtener licencia según la normativa local. No está
+      dirigida a recopilar datos de niños: no hay cuentas ni perfiles.
+    </p>
+
+    <h2>8. Cambios a esta política</h2>
+    <p>
+      Podemos actualizar esta política ocasionalmente. La fecha de la última actualización se
+      indica al inicio de este documento.
+    </p>
+
+    <h2>9. Contacto</h2>
+    <p>
+      Para consultas sobre privacidad, escribe a
+      <a href="mailto:mastersuaw.dev@gmail.com">mastersuaw.dev@gmail.com</a> o visita la página de
+      <a href={`${import.meta.env.BASE_URL}legal/examen-rd/soporte`}>soporte de Examen RD</a>.
+    </p>
+  </LegalContent>
+</BaseLayout>
