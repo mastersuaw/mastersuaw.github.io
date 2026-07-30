@@ -30,11 +30,18 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      # Builds with base /portafolio/, then nests output under docs/portafolio/
+      # and places app-ads.txt (+ root redirect) at the artifact root.
       - name: Build site
         run: npm run build
 
-      - name: Disable Jekyll processing
-        run: touch docs/.nojekyll
+      - name: Verify root app-ads.txt
+        run: |
+          test -f docs/app-ads.txt
+          test -f docs/portafolio/index.html
+          test ! -f docs/portafolio/app-ads.txt
+          echo "Root app-ads.txt:"
+          cat docs/app-ads.txt
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
