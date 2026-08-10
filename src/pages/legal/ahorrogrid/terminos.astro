@@ -1,0 +1,84 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import LegalContent from '../../../components/LegalContent.astro';
+
+const updated = '9 de agosto de 2026';
+---
+
+<BaseLayout
+  title="Términos y condiciones — AhorroGrid"
+  description="Términos y condiciones de uso de AhorroGrid."
+>
+  <LegalContent
+    title="Términos y condiciones"
+    appName="AhorroGrid"
+    appSlug="ahorrogrid"
+    updated={updated}
+  >
+    <p>
+      Al descargar o utilizar <strong>AhorroGrid</strong>, aceptas los siguientes términos y
+      condiciones.
+    </p>
+
+    <h2>1. Descripción del servicio</h2>
+    <p>
+      AhorroGrid es una aplicación de ahorro personal que representa cada meta como un grid 10×10
+      (100 casillas) con montos en pesos dominicanos (RD$). Te permite crear planes, marcar casillas
+      y consultar tu progreso e historial. Se proporciona «tal cual» para uso personal.
+    </p>
+
+    <h2>2. Naturaleza informativa</h2>
+    <p>
+      AhorroGrid es una <strong>herramienta de seguimiento personal</strong>. No es un banco, no
+      mueve dinero real entre cuentas y no sustituye asesoría financiera profesional. Los montos y
+      el progreso dependen de lo que registres tú en la app.
+    </p>
+
+    <h2>3. Uso permitido</h2>
+    <p>Puedes usar la app para planificar y registrar tu ahorro personal. No está permitido:</p>
+    <ul>
+      <li>Modificar, descompilar o realizar ingeniería inversa de la aplicación</li>
+      <li>Utilizar la app con fines ilegales o que infrinjan derechos de terceros</li>
+      <li>Redistribuir la aplicación sin autorización del desarrollador</li>
+      <li>Intentar eludir límites técnicos (por ejemplo, el máximo de planes activos)</li>
+    </ul>
+
+    <h2>4. Cuentas y sincronización</h2>
+    <p>
+      Si en el futuro usas una cuenta para sincronizar datos, eres responsable de mantener la
+      confidencialidad de tus credenciales y de la exactitud de la información que registres.
+    </p>
+
+    <h2>5. Propiedad intelectual</h2>
+    <p>
+      La marca AhorroGrid y el software de esta aplicación están reservados a sus titulares
+      (mastersuaw).
+    </p>
+
+    <h2>6. Limitación de responsabilidad</h2>
+    <p>
+      En la máxima medida permitida por la ley, los autores no responden por decisiones financieras
+      tomadas con base en el uso de la app, ni por pérdida de datos locales (por ejemplo, al
+      desinstalar o borrar la app antes de una sincronización en la nube).
+    </p>
+
+    <h2>7. Exclusión de garantías</h2>
+    <p>
+      La aplicación se ofrece sin garantías de ningún tipo, expresas o implícitas. No garantizamos
+      disponibilidad ininterrumpida ni ausencia de errores.
+    </p>
+
+    <h2>8. Modificaciones</h2>
+    <p>
+      Podemos actualizar estos términos al publicar nuevas versiones de la app. El uso continuado
+      tras los cambios implica la aceptación de los nuevos términos.
+    </p>
+
+    <h2>9. Contacto</h2>
+    <p>
+      Para consultas, visita la página de
+      <a href={`${import.meta.env.BASE_URL}legal/ahorrogrid/soporte`}>soporte</a> o escribe a
+      <a href="mailto:mastersuaw.dev@gmail.com">mastersuaw.dev@gmail.com</a>.
+    </p>
+  </LegalContent>
+</BaseLayout>

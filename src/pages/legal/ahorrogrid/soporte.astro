@@ -1,0 +1,76 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import LegalContent from '../../../components/LegalContent.astro';
+
+const updated = '9 de agosto de 2026';
+const base = import.meta.env.BASE_URL;
+---
+
+<BaseLayout
+  title="Soporte — AhorroGrid"
+  description="Soporte y contacto para AhorroGrid."
+>
+  <LegalContent title="Soporte" appName="AhorroGrid" appSlug="ahorrogrid" updated={updated}>
+    <p>
+      ¿Necesitas ayuda con AhorroGrid? Aquí encontrarás las formas de contacto y recursos útiles.
+    </p>
+
+    <h2>Información de la aplicación</h2>
+    <ul>
+      <li><strong>Nombre:</strong> AhorroGrid</li>
+      <li><strong>Versión:</strong> 0.1.0</li>
+      <li><strong>Desarrollador:</strong> mastersuaw</li>
+      <li><strong>Identificador iOS:</strong> app.ahorogrid.ios</li>
+      <li><strong>Identificador Android:</strong> app.ahorogrid.android</li>
+      <li><strong>Plataformas:</strong> iOS 17+, Android</li>
+      <li>
+        <strong>Repositorio:</strong>
+        <a href="https://github.com/mastersuaw/ahorrogrid" target="_blank" rel="noopener noreferrer"
+          >github.com/mastersuaw/ahorrogrid</a
+        >
+      </li>
+    </ul>
+
+    <h2>Contacto</h2>
+    <div class="support-card">
+      <p>
+        <strong>Correo de soporte:</strong>
+        <a href="mailto:mastersuaw.dev@gmail.com">mastersuaw.dev@gmail.com</a>
+      </p>
+    </div>
+
+    <h2>Preguntas frecuentes</h2>
+    <h3>¿Qué es el grid de 100 casillas?</h3>
+    <p>
+      Cada plan de ahorro es un calendario visual 10×10. Cada casilla tiene un monto en RD$; al
+      marcarla se actualizan el total ahorrado y el progreso hacia tu meta.
+    </p>
+
+    <h3>¿Necesito crear una cuenta?</h3>
+    <p>
+      En la versión actual puedes usar la app con datos locales en el dispositivo. La sincronización
+      en la nube con cuenta está prevista para fases posteriores.
+    </p>
+
+    <h3>¿Cuántos planes puedo tener?</h3>
+    <p>Hasta 5 planes con estado activo a la vez.</p>
+
+    <h3>¿Cómo se reparten los montos en las casillas?</h3>
+    <p>
+      Puedes elegir distribución lineal, progresiva o aleatoria (reproducible). La suma de las 100
+      casillas siempre coincide con tu meta.
+    </p>
+
+    <h3>¿La app mueve dinero de mi banco?</h3>
+    <p>
+      No. AhorroGrid solo registra y visualiza el ahorro que tú marcas; no se conecta a banca ni open
+      banking.
+    </p>
+
+    <h3>Enlaces legales</h3>
+    <ul>
+      <li><a href={`${base}legal/ahorrogrid/privacidad`}>Política de privacidad</a></li>
+      <li><a href={`${base}legal/ahorrogrid/terminos`}>Términos y condiciones</a></li>
+    </ul>
+  </LegalContent>
+</BaseLayout>
