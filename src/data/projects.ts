@@ -441,6 +441,49 @@ export const projects: Project[] = [
       },
     },
   },
+  {
+    slug: 'ahorrogrid',
+    name: 'AhorroGrid',
+    tagline: 'Ahorro visual con grid 10×10: 100 casillas hacia tu meta en RD$',
+    description:
+      'App nativa de ahorro personal que digitaliza el reto de las 100 casillas: cada meta es un grid 10×10; cada celda tiene un monto en RD$ y al marcarla se actualizan totales y progreso. Hasta 5 planes activos, distribución lineal/progresiva/aleatoria, historial de acciones y navegación Inicio · Planes · Historial · Perfil. iOS 17+ (SwiftUI) y Android (Jetpack Compose); sync en la nube con Supabase en fases posteriores.',
+    bundleId: 'app.ahorogrid.ios',
+    version: '0.1.0',
+    platforms: ['iOS 17+', 'Android'],
+    icon: `${BASE}images/apps/ahorrogrid.png`,
+    features: [
+      'Grid 10×10 (100 casillas) por meta de ahorro en RD$',
+      'Crear planes con título, meta, duración, color y tipo de distribución',
+      'Distribución lineal, progresiva o aleatoria (suma exacta = meta)',
+      'Estados de celda: pendiente, completado, en proceso y anulado',
+      'Hasta 5 planes activos a la vez',
+      'Inicio con resumen global, carrusel de planes y actividad reciente',
+      'Historial append-only de acciones de ahorro',
+      'Tabs: Inicio, Planes, Historial y Perfil (+ FAB para crear)',
+      'Datos locales en el dispositivo; auth/sync Supabase previstos',
+      'Sin banca ni open banking: solo seguimiento visual del ahorro',
+    ],
+    stack: ['SwiftUI', 'Jetpack Compose', 'Kotlin', 'Supabase', 'SwiftData'],
+    repoUrl: 'https://github.com/mastersuaw/ahorrogrid',
+    stores: {},
+    legal: {
+      privacy: {
+        type: 'internal',
+        url: `${BASE}legal/ahorrogrid/privacidad`,
+        label: 'Política de privacidad',
+      },
+      terms: {
+        type: 'internal',
+        url: `${BASE}legal/ahorrogrid/terminos`,
+        label: 'Términos y condiciones',
+      },
+      support: {
+        type: 'internal',
+        url: `${BASE}legal/ahorrogrid/soporte`,
+        label: 'Soporte',
+      },
+    },
+  },
 ];
 
 export function getProjectBySlug(slug: string): Project | undefined {
