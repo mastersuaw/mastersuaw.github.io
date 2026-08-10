@@ -400,6 +400,48 @@ export const projects: Project[] = [
     },
   },
   {
+    slug: 'prestacion-rd',
+    name: 'Prestacion RD',
+    tagline: 'Estima prestaciones laborales en República Dominicana (preaviso, cesantía y más)',
+    description:
+      'Calculadora nativa offline de prestaciones laborales para República Dominicana. Estima preaviso, cesantía, vacaciones y salario de Navidad con metodología alineada a calculo.mt.gob.do y el Código de Trabajo. Wizard de datos, salarios y opciones; resultado con desglose y PDF para compartir. Sin cuenta ni telemetría. Estimación orientativa: no es un certificado oficial del Ministerio de Trabajo.',
+    bundleId: 'do.prestacionrd.mastersuaw',
+    version: '1.0.0',
+    platforms: ['iOS 15+', 'Android'],
+    icon: `${BASE}images/apps/prestacion-rd.png`,
+    features: [
+      'Wizard: datos del trabajador → salarios → opciones → resultado',
+      'Preaviso (Art. 76), cesantía (Art. 80, corte 17-jun-1992), vacaciones (Arts. 177–181) y salario de Navidad (Art. 219)',
+      'Tipos de cálculo: ordinario, intermitente y trabajo doméstico',
+      'Períodos de pago: mensual, quincenal, semanal y diario',
+      'Motivos de terminación: desahucio, renuncia, causa justificada o personalizado',
+      'Hasta 12 períodos de salario y comisión; completar hacia abajo desde el primero',
+      'Desglose de totales y compartir resultado en PDF',
+      'Ayuda con enlaces a calculo.mt.gob.do y al Código de Trabajo',
+      'Tema claro, oscuro o según el sistema',
+      'Offline: sin backend, cuenta ni telemetría; estimación orientativa (no oficial)',
+    ],
+    stack: ['UIKit', 'Swift', 'Kotlin', 'Material Components'],
+    stores: {},
+    legal: {
+      privacy: {
+        type: 'internal',
+        url: `${BASE}legal/prestacion-rd/privacidad`,
+        label: 'Política de privacidad',
+      },
+      terms: {
+        type: 'internal',
+        url: `${BASE}legal/prestacion-rd/terminos`,
+        label: 'Términos y condiciones',
+      },
+      support: {
+        type: 'internal',
+        url: `${BASE}legal/prestacion-rd/soporte`,
+        label: 'Soporte',
+      },
+    },
+  },
+  {
     slug: 'examen-rd',
     name: 'Examen RD',
     tagline: 'Preparación teórica para la licencia de conducir en República Dominicana',

@@ -1,0 +1,65 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import LegalContent from '../../../components/LegalContent.astro';
+
+const updated = '9 de agosto de 2026';
+const base = import.meta.env.BASE_URL;
+---
+
+<BaseLayout
+  title="Soporte — Prestacion RD"
+  description="Soporte y contacto para Prestacion RD."
+>
+  <LegalContent title="Soporte" appName="Prestacion RD" appSlug="prestacion-rd" updated={updated}>
+    <p>
+      ¿Necesitas ayuda con Prestacion RD? Aquí encontrarás las formas de contacto y recursos útiles.
+    </p>
+
+    <h2>Información de la aplicación</h2>
+    <ul>
+      <li><strong>Nombre:</strong> Prestacion RD</li>
+      <li><strong>Versión:</strong> 1.0.0</li>
+      <li><strong>Desarrollador:</strong> mastersuaw</li>
+      <li><strong>Identificador:</strong> do.prestacionrd.mastersuaw</li>
+      <li><strong>Plataformas:</strong> iOS 15+, Android</li>
+    </ul>
+
+    <h2>Contacto</h2>
+    <div class="support-card">
+      <p>
+        <strong>Correo de soporte:</strong>
+        <a href="mailto:mastersuaw.dev@gmail.com">mastersuaw.dev@gmail.com</a>
+      </p>
+    </div>
+
+    <h2>Preguntas frecuentes</h2>
+    <h3>¿Necesito crear una cuenta?</h3>
+    <p>No. Prestacion RD funciona offline, sin registro ni inicio de sesión.</p>
+
+    <h3>¿Los resultados son oficiales?</h3>
+    <p>
+      No. Es una estimación orientativa alineada a la metodología pública de
+      <a href="https://calculo.mt.gob.do/" target="_blank" rel="noopener noreferrer"
+        >calculo.mt.gob.do</a
+      >. No reemplaza asesoría legal ni una liquidación oficial del Ministerio de Trabajo.
+    </p>
+
+    <h3>¿Qué datos guarda la app?</h3>
+    <p>
+      Preferencia de tema en el dispositivo. Los datos del cálculo viven en la sesión actual y, si
+      compartes, en un PDF local. No hay telemetría ni sincronización en la nube.
+    </p>
+
+    <h3>¿Qué necesito para calcular?</h3>
+    <p>
+      Fechas de ingreso y salida, tipo de cálculo, período de pago, motivo de terminación y al menos
+      un salario (con comisión opcional) de los últimos períodos.
+    </p>
+
+    <h3>Enlaces legales</h3>
+    <ul>
+      <li><a href={`${base}legal/prestacion-rd/privacidad`}>Política de privacidad</a></li>
+      <li><a href={`${base}legal/prestacion-rd/terminos`}>Términos y condiciones</a></li>
+    </ul>
+  </LegalContent>
+</BaseLayout>

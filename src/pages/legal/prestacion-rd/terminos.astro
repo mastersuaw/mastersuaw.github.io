@@ -1,0 +1,82 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import LegalContent from '../../../components/LegalContent.astro';
+
+const updated = '9 de agosto de 2026';
+---
+
+<BaseLayout
+  title="Términos y condiciones — Prestacion RD"
+  description="Términos y condiciones de uso de Prestacion RD."
+>
+  <LegalContent
+    title="Términos y condiciones"
+    appName="Prestacion RD"
+    appSlug="prestacion-rd"
+    updated={updated}
+  >
+    <p>
+      Al descargar o utilizar <strong>Prestacion RD</strong>, aceptas los siguientes términos y
+      condiciones.
+    </p>
+
+    <h2>1. Descripción del servicio</h2>
+    <p>
+      Prestacion RD estima prestaciones laborales en República Dominicana (preaviso, cesantía,
+      vacaciones y salario de Navidad) con metodología alineada a la calculadora pública del
+      Ministerio de Trabajo. Es una <strong>herramienta informativa</strong> y se proporciona «tal
+      cual» para uso personal.
+    </p>
+
+    <h2>2. Sin garantía de exactitud oficial</h2>
+    <p>
+      Los cálculos son orientativos. <strong>No constituyen un certificado oficial</strong> del
+      Ministerio de Trabajo ni sustituyen asesoría legal, una liquidación oficial o el criterio de
+      un profesional autorizado. La normativa y la implementación de referencia pueden cambiar.
+    </p>
+
+    <h2>3. Uso permitido</h2>
+    <p>
+      Puedes usar la app para estimar prestaciones de forma personal. No debes presentarla como
+      asesoría profesional autorizada ni como documento oficial. Tampoco está permitido:
+    </p>
+    <ul>
+      <li>Modificar, descompilar o realizar ingeniería inversa de la aplicación</li>
+      <li>Utilizar la app con fines ilegales o que infrinjan derechos de terceros</li>
+      <li>Redistribuir la aplicación sin autorización del desarrollador</li>
+    </ul>
+
+    <h2>4. Propiedad intelectual</h2>
+    <p>
+      La marca Prestacion RD y el software de esta aplicación están reservados a sus titulares
+      (mastersuaw). Las referencias al Ministerio de Trabajo y a su calculadora pública no implican
+      afiliación ni respaldo oficial.
+    </p>
+
+    <h2>5. Limitación de responsabilidad</h2>
+    <p>
+      En la máxima medida permitida por la ley, los autores no responden por decisiones tomadas con
+      base en los resultados de la app (liquidaciones, reclamos, negociaciones, etc.).
+    </p>
+
+    <h2>6. Exclusión de garantías</h2>
+    <p>
+      La aplicación se ofrece sin garantías de ningún tipo, expresas o implícitas. No garantizamos
+      que los cálculos coincidan siempre con una liquidación oficial ni que el servicio esté libre
+      de errores.
+    </p>
+
+    <h2>7. Modificaciones</h2>
+    <p>
+      Podemos actualizar estos términos al publicar nuevas versiones de la app. El uso continuado
+      tras los cambios implica la aceptación de los nuevos términos.
+    </p>
+
+    <h2>8. Contacto</h2>
+    <p>
+      Para consultas, visita la página de
+      <a href={`${import.meta.env.BASE_URL}legal/prestacion-rd/soporte`}>soporte</a> o escribe a
+      <a href="mailto:mastersuaw.dev@gmail.com">mastersuaw.dev@gmail.com</a>.
+    </p>
+  </LegalContent>
+</BaseLayout>
